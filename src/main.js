@@ -3,9 +3,9 @@ import App from './App.vue'
 import '@/assets/css/tailwind.css'
 import router from '@/router'
 import { dollarFilter, percentFilter } from '@/filters'
-import { VueSpinners } from '@saeris/vueSpinners'
-import Chartkick from 'vueChartkick'
-import Chart from 'Chart.js'
+import { VueSpinners } from '@saeris/vue-spinners'
+import Chartkick from 'vue-chartkick'
+import Chart from 'chart.js'
 
 Vue.use(Chartkick.use(Chart))
 Vue.use(VueSpinners)
