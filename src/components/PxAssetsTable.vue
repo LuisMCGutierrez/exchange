@@ -1,7 +1,7 @@
 <template>
-  <table>
+  <table class="shadow-lg">
     <thead>
-      <tr class="bg-gray-100 border-b-2 border-gray-400">
+      <tr class="bg-gray-100 border-b-2 border-gray-400 shadow-lg">
         <th></th>
         <th :class="{ up: this.sortOrder == 1, down: this.sortOrder == -1 }">
           <span class="underline cursorpointer" @click="changeSortOrder"
@@ -25,7 +25,7 @@
     </thead>
     <tbody>
       <tr
-        class="border-b border-gray-200 hover:bg-gray-100 hover:bg-orange-100"
+        class="border-b border-gray-200 hover:bg-lime-100 hover:shadow-lg"
         v-for="coin in filteredAssets"
         :key="coin.id"
       >
@@ -39,7 +39,7 @@
         <td>{{ coin.rank }}</td>
         <td>
           <router-link
-            class="hover:underline text-green-600"
+            class="hover:underline text-green-600 font-medium"
             :to="{ name: 'coin-detail', params: { id: coin.id } }"
           >
             {{ coin.name }}
@@ -51,6 +51,7 @@
         <td>{{ coin.priceUsd | dollar }}</td>
         <td>{{ coin.marketCapUsd | dollar }}</td>
         <td
+          class="font-medium"
           :class="
             coin.changePercent24Hr.includes('-')
               ? 'text-red-600'

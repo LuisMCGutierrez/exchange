@@ -1,7 +1,7 @@
 <template>
   <button
     @click="buttonClick"
-    class="bg-transparent hover:bg-green-500 text-green-700 font-semibold hover:text-white py-2 px-2 border border-green-500 hover:border-transparent rounded"
+    class="bg-transparent hover:bg-lime-500 text-lime-700 font-semibold hover:text-white py-2 px-2 border border-lime-500 hover:border-transparent rounded"
   >
     <pulse-loader
       :loading="isLoading"
